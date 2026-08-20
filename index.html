@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#B23A2F">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://pagead2.googlesyndication.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+<title>ASCVD Risk Calculator &mdash; Heart Disease &amp; Stroke Risk Estimator</title>
+<meta name="description" content="Free ASCVD risk calculator. Estimate your 10-year heart disease and stroke risk tier from age, cholesterol, blood pressure, smoking, and diabetes status, save results to track your trend, with a link to the official ACC/AHA calculator.">
+<meta property="og:title" content="Free ASCVD Risk Calculator | Healthy Life Scale">
+<meta property="og:description" content="Estimate your 10-year heart disease and stroke risk tier, and track it over time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ascvd.healthylifescale.com/">
+<meta property="og:image" content="https://healthylifescale.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Healthy Life Scale">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free ASCVD Risk Calculator | Healthy Life Scale">
+<meta name="twitter:description" content="Estimate your 10-year heart disease and stroke risk tier, and track it over time.">
+<meta name="twitter:image" content="https://healthylifescale.com/og-image.png">
+<link rel="canonical" href="https://ascvd.healthylifescale.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P41HN02DDV"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6021714937287056"
+     crossorigin="anonymous"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P41HN02DDV');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What does ASCVD stand for?", "acceptedAnswer": {"@type": "Answer", "text": "ASCVD stands for Atherosclerotic Cardiovascular Disease \u2014 an umbrella term covering coronary heart disease, stroke, and peripheral artery disease caused by plaque buildup (atherosclerosis) in the arteries."}},
+    {"@type": "Question", "name": "Is this the same as the official ACC/AHA ASCVD risk calculator?", "acceptedAnswer": {"@type": "Answer", "text": "No. The official calculator uses the Pooled Cohort Equations, a validated clinical formula with race- and sex-specific coefficients that produces an exact percentage. This tool uses a simplified, transparent point system based on the same risk factors to estimate a general risk tier, not a precise percentage. Use the official ACC tool (linked above) for the clinically validated number."}},
+    {"@type": "Question", "name": "What counts as a 'hard' ASCVD event?", "acceptedAnswer": {"@type": "Answer", "text": "In risk models, a hard ASCVD event typically means a first non-fatal heart attack, death from coronary heart disease, or a fatal or non-fatal stroke \u2014 the major, unambiguous cardiovascular events researchers track."}},
+    {"@type": "Question", "name": "What risk factors matter most for ASCVD?", "acceptedAnswer": {"@type": "Answer", "text": "Age, blood pressure, total and HDL cholesterol, smoking status, and diabetes are the core factors used in validated risk models. Age tends to be the single largest driver, which is why risk estimates rise steeply as people move into their 50s, 60s, and beyond."}},
+    {"@type": "Question", "name": "How can I lower my ASCVD risk?", "acceptedAnswer": {"@type": "Answer", "text": "The modifiable factors are the ones worth focusing on: quitting smoking, managing blood pressure, improving cholesterol (through diet, exercise, or medication), and managing blood sugar if you have diabetes. Each of these has strong evidence behind it for reducing cardiovascular risk over time."}},
+    {"@type": "Question", "name": "At what risk level do doctors consider starting statin therapy?", "acceptedAnswer": {"@type": "Answer", "text": "Current guidelines generally use a 10-year risk of 7.5% or higher as a key threshold for discussing statin therapy, with the conversation often starting even earlier at the 5% 'borderline' tier depending on other individual factors. This is a decision to make with a doctor, not from a calculator alone."}},
+    {"@type": "Question", "name": "Can I track how my risk tier changes over time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 after estimating your tier, tap 'Save this result' to add it to your private history, stored on your device only. This makes it easy to see how lifestyle changes or updated numbers shift your estimated tier."}},
+    {"@type": "Question", "name": "How often should I recalculate my ASCVD risk?", "acceptedAnswer": {"@type": "Answer", "text": "A reasonable approach is to recalculate whenever you get updated blood pressure or cholesterol numbers from a checkup, or after a significant change like quitting smoking or a new diabetes diagnosis \u2014 typically once a year or so for most adults."}}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --paper:#FAF7F0; --paper-raised:#FFFFFF; --ink:#191918; --ink-hover:#37372F; --ink-soft:#585448;
+    --muted:#8A8577; --protein:#B23A2F; --carb:#C08A17; --fat:#5C6B2E; --fiber:#3A6B6B;
+    --danger:#B23A2F; --hair:#DEDACD; --heart:#B23A2F; --heart-soft:#FBEAEA;
+    --tier-low:#3A6B6B; --tier-border:#C08A17; --tier-int:#D17A2E; --tier-high:#B23A2F;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; }
+  #root{ max-width:660px; margin:0 auto; padding:0 18px 80px; }
+
+  .site-header{ position:sticky; top:0; z-index:100; background:var(--paper); border-bottom:1.5px solid var(--ink); margin-bottom:22px; padding:14px 0; }
+  #resultCard, #bmrLine, #resultBanner, #ccResults, #resultLabel{ scroll-margin-top: 80px; }
+  .site-header-inner{ display:flex; align-items:center; justify-content:space-between; position:relative; }
+  .site-logo{ display:flex; align-items:center; gap:7px; font-family:'Archivo Black',sans-serif; font-size:14px; text-transform:uppercase; letter-spacing:-0.01em; color:var(--ink); text-decoration:none; white-space:nowrap; }
+  .site-logo .logo-icon{ flex-shrink:0; display:block; }
+  .current-page{ font-family:'Space Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.03em; color:var(--muted); display:none; }
+  .tools-dropdown{ position:relative; }
+  .tools-btn{ display:flex; align-items:center; gap:7px; font-family:'Space Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.03em; background:var(--ink); color:var(--paper); border:1.5px solid var(--ink); padding:9px 14px; border-radius:3px; cursor:pointer; transition:background-color 0.15s ease; }
+  .tools-btn:hover{ background:#33332E; }
+  .tools-btn .chevron{ transition:transform 0.15s ease; flex-shrink:0; }
+  .tools-btn[aria-expanded="true"] .chevron{ transform:rotate(180deg); }
+  .tools-menu{ display:none; position:absolute; top:calc(100% + 10px); right:0; width:320px; max-width:calc(100vw - 36px); background:var(--paper-raised); border:1.5px solid var(--ink); box-shadow:0 10px 26px rgba(26,26,22,0.16); padding:8px; z-index:200; max-height:70vh; overflow-y:auto; }
+  .tools-menu.open{ display:block; }
+  .tools-menu-label{ font-family:'Space Mono',monospace; font-size:9.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); padding:8px 10px 4px; }
+  .tools-menu a{ display:block; padding:10px; border-radius:3px; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--hair); }
+  .tools-menu a:last-child{ border-bottom:none; }
+  .tools-menu a:hover{ background:var(--paper); }
+  .tools-menu .tm-name{ font-weight:700; font-size:13px; margin-bottom:2px; }
+  .tools-menu .tm-desc{ font-size:11px; color:var(--ink-soft); line-height:1.45; }
+  @media (min-width:640px){ .current-page{ display:block; } }
+
+  .brand{ margin-bottom:18px; }
+  .brand h1{ font-family:'Archivo Black',sans-serif; font-size:20px; letter-spacing:-0.02em; margin:0; text-transform:uppercase; }
+  .brand .sub{ font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:0.04em; margin-top:6px; }
+
+  .official-link-box{ background:var(--heart-soft); border:1.5px solid var(--heart); padding:14px 16px; margin-bottom:20px; font-size:12.5px; line-height:1.65; color:var(--ink-soft); }
+  .official-link-box b{ color:var(--ink); }
+  .official-link-box a{ color:var(--heart); font-weight:700; }
+
+  .card{ background:var(--paper-raised); border:1.5px solid var(--ink); padding:20px; margin-bottom:20px; }
+  .card h3{ font-family:'Space Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; margin:0 0 14px; color:var(--ink-soft); }
+  .card h2.section-title{ font-family:'Archivo Black',sans-serif; font-size:17px; text-transform:uppercase; letter-spacing:-0.01em; margin:0 0 14px; }
+
+  .segmented{ display:flex; border:1.5px solid var(--ink); border-radius:3px; overflow:hidden; margin-bottom:14px; }
+  .segmented button{ flex:1; font-family:'Space Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.02em; padding:9px 6px; border:none; background:var(--paper-raised); color:var(--ink); cursor:pointer; transition:background-color 0.15s ease; border-right:1px solid var(--ink); }
+  .segmented button:last-child{ border-right:none; }
+  .segmented button.active{ background:var(--ink); color:var(--paper); }
+  .segmented button:not(.active):hover{ background:var(--hair); }
+
+  .section-label{ font-family:'Space Mono',monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); margin:0 0 8px; }
+  .section-block{ margin-bottom:18px; }
+  .section-block:last-of-type{ margin-bottom:0; }
+
+    .field-row{ display:flex; flex-direction:column; gap:10px; margin-bottom:10px; }
+  .field{ display:flex; align-items:center; gap:12px; }
+  .field label{ flex:0 0 96px; font-size:11px; color:var(--muted); font-family:'Space Mono',monospace; margin-bottom:0; text-transform:uppercase; letter-spacing:0.03em; }
+  .field input, .field select{ flex:1; min-width:0; padding:9px 10px; border:1.5px solid var(--hair); border-radius:2px; font-family:'Inter',sans-serif; font-size:14px; background:var(--paper); color:var(--ink); }
+  .field input:focus, .field select:focus{ outline:2px solid var(--heart); outline-offset:1px; border-color:var(--heart); }
+  @media (max-width:340px){
+    .field{ flex-direction:column; align-items:stretch; gap:4px; }
+    .field label{ flex:none; }
+  }
+
+  .calc-btn{ background:var(--ink); color:var(--paper); border:none; padding:13px 20px; font-family:'Space Mono',monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; cursor:pointer; border-radius:2px; width:100%; margin-top:20px; transition:background-color 0.2s ease; }
+  .calc-btn:hover{ background:var(--ink-hover); }
+
+  .result-card{ background:var(--paper-raised); border:3px solid var(--ink); padding:22px; display:none; margin-bottom:20px; text-align:center; }
+  .result-card.show{ display:block; }
+  .tier-badge{ display:inline-block; padding:10px 22px; border-radius:24px; font-family:'Archivo Black',sans-serif; font-size:18px; text-transform:uppercase; letter-spacing:-0.01em; color:#fff; margin-bottom:14px; }
+  .tier-range{ font-family:'Space Mono',monospace; font-size:12.5px; color:var(--ink-soft); margin-bottom:16px; }
+  .tier-scale{ display:flex; height:10px; border-radius:5px; overflow:hidden; border:1.5px solid var(--ink); margin-bottom:8px; }
+  .tier-scale div{ height:100%; }
+  .tier-scale-labels{ display:flex; justify-content:space-between; font-family:'Space Mono',monospace; font-size:9px; color:var(--muted); margin-bottom:18px; text-align:left;}
+  .tier-marker-wrap{ position:relative; height:0; margin-bottom:14px; }
+  .tier-marker{ position:absolute; top:-32px; width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--ink); margin-left:-6px; }
+
+  .breakdown-row{ display:flex; align-items:center; padding:9px 0; border-top:1px solid var(--hair); text-align:left; }
+  .breakdown-row:first-of-type{ border-top:none; }
+  .br-name{ flex:1; font-size:13px; font-weight:600; }
+  .br-value{ font-family:'Space Mono',monospace; font-size:12px; font-weight:700; color:var(--heart); }
+
+  .article-p{ font-size:14px; line-height:1.75; color:var(--ink-soft); margin:0 0 14px; }
+  .article-p:last-child{ margin-bottom:0; }
+  .article-p b{ color:var(--ink); }
+  .article-p a{ color:var(--heart); }
+
+  .tier-table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  .tier-table th{ font-family:'Space Mono',monospace; font-size:9.5px; text-transform:uppercase; letter-spacing:0.03em; color:var(--muted); text-align:left; padding:7px 5px; border-bottom:1.5px solid var(--ink); }
+  .tier-table td{ padding:9px 5px; border-bottom:1px solid var(--hair); }
+  .tier-table tr:last-child td{ border-bottom:none; }
+  .tier-table .swatch-cell{ width:14px; }
+  .tier-swatch{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+
+  .factor-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .factor-card{ background:var(--paper); border:1.5px solid var(--hair); padding:14px; }
+  .factor-card .fc-icon{ font-size:20px; margin-bottom:8px; display:block; }
+  .factor-card .fc-title{ font-weight:700; font-size:13px; margin-bottom:5px; }
+  .factor-card .fc-desc{ font-size:11.5px; color:var(--ink-soft); line-height:1.5; }
+  @media (max-width:480px){ .factor-grid{ grid-template-columns:1fr; } }
+
+  .faq-item{ border-bottom:1px solid var(--hair); }
+  .faq-item:last-child{ border-bottom:none; }
+  .faq-q{ width:100%; text-align:left; background:none; border:none; padding:14px 0; font-weight:700; font-size:13.5px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; color:var(--ink); font-family:'Inter',sans-serif; }
+  .faq-q .faq-icon{ transition:transform 0.15s ease; flex-shrink:0; margin-left:10px; font-family:'Space Mono',monospace; }
+  .faq-q.open .faq-icon{ transform:rotate(45deg); }
+  .faq-a{ display:none; padding:0 0 14px; font-size:13px; line-height:1.65; color:var(--ink-soft); }
+  .faq-a.open{ display:block; }
+
+  .save-row{ display:flex; gap:10px; margin-top:16px; }
+  .save-btn{ flex:1; background:var(--ink); color:var(--paper); border:none; padding:11px; font-family:'Space Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.03em; cursor:pointer; border-radius:2px; }
+  .save-btn:disabled{ opacity:0.5; cursor:default; }
+  .history-card{ display:none; }
+  .history-card.show{ display:block; }
+  .history-list{ margin:0; }
+  .history-row{ display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--hair); font-size:12.5px; }
+  .history-row:last-child{ border-bottom:none; }
+  .history-row .hr-date{ color:var(--ink-soft); }
+  .history-row .hr-val{ font-family:'Space Mono',monospace; font-weight:700; }
+  .clear-history{ background:none; border:none; font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; cursor:pointer; margin-top:10px; text-decoration:underline; padding:0; }
+
+  .medical-note{ background:var(--heart-soft); border-left:3px solid var(--heart); padding:12px 14px; font-size:12.5px; line-height:1.6; color:var(--ink-soft); }
+  .medical-note b{ color:var(--ink); }
+
+  .explore-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .explore-card{ background:var(--paper-raised); border:1.5px solid var(--hair); padding:13px 14px; text-decoration:none; color:var(--ink); display:block; transition:border-color 0.15s ease, background-color 0.15s ease; }
+  .explore-card:hover{ border-color:var(--ink); background:var(--paper); }
+  .explore-card .ec-name{ font-weight:700; font-size:13.5px; margin-bottom:4px; }
+  .explore-card .ec-desc{ font-size:11.5px; color:var(--ink-soft); line-height:1.45; margin-bottom:8px; }
+  .explore-card .ec-arrow{ font-family:'Space Mono',monospace; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; }
+  @media (max-width:520px){ .explore-grid{ grid-template-columns:1fr; } }
+
+  .disclaimer{ font-family:'Space Mono',monospace; font-size:10.5px; color:var(--muted); margin-top:18px; line-height:1.6; }
+
+  @media (max-width:420px){ .field-row{ grid-template-columns:1fr; } }
+
+  .footer-css-placeholder{ display:none; }
+
+  .site-footer{ margin-top:30px; border-top:1.5px solid var(--ink); padding-top:26px; }
+  .footer-about h3{ font-family:'Archivo Black',sans-serif; font-size:15px; text-transform:uppercase; letter-spacing:-0.01em; margin:0 0 10px; }
+  .footer-about p{ font-size:12.5px; line-height:1.75; color:var(--ink-soft); margin:0 0 18px; max-width:560px; }
+  .footer-links-title{ font-family:'Space Mono',monospace; font-size:9.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); margin-bottom:10px; }
+  .footer-links{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px 16px; margin-bottom:20px; }
+  .footer-links a{ font-size:11.5px; color:var(--protein); text-decoration:underline; text-underline-offset:2px; }
+  .footer-links a:hover{ color:var(--ink); text-decoration:none; }
+    .footer-legal{ font-family:'Space Mono',monospace; font-size:10.5px; color:var(--muted); margin-bottom:10px; }
+  .footer-legal a{ color:var(--ink-soft); text-decoration:underline; text-underline-offset:2px; }
+  .footer-legal a:hover{ color:var(--ink); }
+  .footer-legal .fl-dot{ margin:0 8px; color:var(--hair); }
+
+  .footer-bottom{ font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); border-top:1px solid var(--hair); padding-top:14px; line-height:1.7; }
+  @media (max-width:520px){ .footer-links{ grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<div id="root">
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="https://healthylifescale.com" class="site-logo">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <rect x="2" y="2" width="96" height="96" rx="18" fill="var(--protein)"/>
+          <polyline points="16,50 30,50 38,28 50,74 61,36 70,50 84,50" fill="none" stroke="var(--paper)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Healthy Life Scale
+      </a>
+      <span class="current-page">ASCVD Risk</span>
+      <div class="tools-dropdown">
+        <button class="tools-btn" id="toolsBtn" aria-haspopup="true" aria-expanded="false">
+          Other Tools
+          <svg class="chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3L5 7L9 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="tools-menu" id="toolsMenu">
+          <div class="tools-menu-label">Other tools</div>
+        <a href="https://healthylifescale.com">
+          <div class="tm-name">Calorie Tracker</div>
+          <div class="tm-desc">Search 240+ foods and track daily calories, protein, carbs, fat, fiber, sugar & sodium.</div>
+        </a>
+        <a href="https://bmi.healthylifescale.com">
+          <div class="tm-name">BMI Calculator</div>
+          <div class="tm-desc">Check your Body Mass Index and healthy weight range.</div>
+        </a>
+        <a href="https://bodyfat.healthylifescale.com">
+          <div class="tm-name">Body Fat % Calculator</div>
+          <div class="tm-desc">Estimate body fat using the Navy tape-measure method.</div>
+        </a>
+        <a href="https://waisttohip.healthylifescale.com">
+          <div class="tm-name">Waist-to-Hip Ratio</div>
+          <div class="tm-desc">Check your ratio against WHO risk categories.</div>
+        </a>
+        <a href="https://framesize.healthylifescale.com">
+          <div class="tm-name">Body Frame Size Calculator</div>
+          <div class="tm-desc">Find your small, medium, or large frame size.</div>
+        </a>
+        <a href="https://bri.healthylifescale.com">
+          <div class="tm-name">Body Roundness Index</div>
+          <div class="tm-desc">A newer alternative to BMI using waist, height, and hip.</div>
+        </a>
+        <a href="https://water.healthylifescale.com">
+          <div class="tm-name">Water Intake</div>
+          <div class="tm-desc">Get a daily hydration goal and log glasses as you drink.</div>
+        </a>
+        <a href="https://bmr.healthylifescale.com">
+          <div class="tm-name">BMR / TDEE</div>
+          <div class="tm-desc">Find your daily calorie needs and a personalized macro split.</div>
+        </a>
+        <a href="https://protein.healthylifescale.com">
+          <div class="tm-name">Protein Intake Calculator</div>
+          <div class="tm-desc">Find your daily protein target based on body weight and goal.</div>
+        </a>
+        <a href="https://caloriesburned.healthylifescale.com">
+          <div class="tm-name">Calories Burned Calculator</div>
+          <div class="tm-desc">See how many calories you burned during any activity.</div>
+        </a>
+        <a href="https://sleep.healthylifescale.com">
+          <div class="tm-name">Sleep Calculator</div>
+          <div class="tm-desc">Find your ideal bedtime or wake-up time by sleep cycle.</div>
+        </a>
+        <a href="https://nap.healthylifescale.com">
+          <div class="tm-name">Nap Calculator</div>
+          <div class="tm-desc">Find your ideal nap length and wake-up time.</div>
+        </a>
+        <a href="https://duedate.healthylifescale.com">
+          <div class="tm-name">Pregnancy Due Date</div>
+          <div class="tm-desc">Estimate your due date and track gestational age week by week.</div>
+        </a>
+        <a href="https://pregnancyweight.healthylifescale.com">
+          <div class="tm-name">Pregnancy Weight Gain</div>
+          <div class="tm-desc">See your recommended pregnancy weight gain range.</div>
+        </a>
+        <a href="https://period.healthylifescale.com">
+          <div class="tm-name">Period Tracker</div>
+          <div class="tm-desc">Estimate your next period, ovulation day, and fertile window.</div>
+        </a>
+        <a href="https://height.healthylifescale.com">
+          <div class="tm-name">Height Predictor</div>
+          <div class="tm-desc">Estimate a child's adult height from parents' heights.</div>
+        </a>
+        <a href="https://bloodpressure.healthylifescale.com">
+          <div class="tm-name">Blood Pressure Calculator</div>
+          <div class="tm-desc">Check your reading against AHA blood pressure categories.</div>
+        </a>
+        <a href="https://heartage.healthylifescale.com">
+          <div class="tm-name">Heart Age Calculator</div>
+          <div class="tm-desc">See how lifestyle factors compare your heart age to your real age.</div>
+        </a>
+        <a href="https://heartratezone.healthylifescale.com">
+          <div class="tm-name">Target Heart Rate Zone</div>
+          <div class="tm-desc">Find your personalized training zones using the Karvonen formula.</div>
+        </a>
+        <a href="https://heartraterecovery.healthylifescale.com">
+          <div class="tm-name">Heart Rate Recovery</div>
+          <div class="tm-desc">Measure your post-exercise cardiovascular fitness.</div>
+        </a>
+        <a href="https://breathholding.healthylifescale.com">
+          <div class="tm-name">Breath Holding Test</div>
+          <div class="tm-desc">Time how long you can hold your breath and see how it compares.</div>
+        </a>
+        <a href="https://pace.healthylifescale.com">
+          <div class="tm-name">Running Pace Calculator</div>
+          <div class="tm-desc">Calculate your pace, speed, and predicted race times.</div>
+        </a>
+        <a href="https://symptoms.healthylifescale.com">
+          <div class="tm-name">Symptom Checker</div>
+          <div class="tm-desc">Get an urgency level based on your symptoms, age, and history.</div>
+        </a>
+        <a href="https://mentalhealth.healthylifescale.com">
+          <div class="tm-name">Mental Health Survey</div>
+          <div class="tm-desc">A private PHQ-9 / GAD-7 depression & anxiety screening.</div>
+        </a>
+        <a href="https://fertility.healthylifescale.com">
+          <div class="tm-name">Fertility Checklist</div>
+          <div class="tm-desc">Check lifestyle factors linked to sperm health and track over time.</div>
+        </a>
+        <a href="https://gripstrength.healthylifescale.com">
+          <div class="tm-name">Grip Strength Calculator</div>
+          <div class="tm-desc">Benchmark your handgrip strength by age and sex.</div>
+        </a>
+        <a href="https://onerepmax.healthylifescale.com">
+          <div class="tm-name">One-Rep Max Calculator</div>
+          <div class="tm-desc">Estimate your 1RM using the Epley and Brzycki formulas.</div>
+        </a>
+        <a href="https://pushuptest.healthylifescale.com">
+          <div class="tm-name">Push-Up / Sit-Up Test</div>
+          <div class="tm-desc">Benchmark your push-up or sit-up count by age and sex.</div>
+        </a>
+        <a href="https://bac.healthylifescale.com">
+          <div class="tm-name">BAC Calculator</div>
+          <div class="tm-desc">Educational blood alcohol content estimate.</div>
+        </a>
+        <a href="https://a1c.healthylifescale.com">
+          <div class="tm-name">A1C Converter</div>
+          <div class="tm-desc">Convert between A1C and average blood sugar.</div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+  (function(){
+    var btn = document.getElementById('toolsBtn');
+    var menu = document.getElementById('toolsMenu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if(!menu.classList.contains('open')) return;
+      if(!menu.contains(e.target) && !btn.contains(e.target)){
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')){
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+      }
+    });
+  })();
+  </script>
+
+  <div class="brand">
+    <h1>ASCVD / Heart Disease Risk Calculator</h1>
+    <div class="sub">estimate your 10-year heart attack &amp; stroke risk tier</div>
+  </div>
+
+  <div class="official-link-box">
+    <b>Want the exact clinical percentage?</b> This tool gives a simplified risk tier, not a precise number. For the validated 10-year percentage used in clinical practice, use the official <a href="https://tools.acc.org/ascvd-risk-estimator-plus/" target="_blank" rel="noopener">ACC/AHA ASCVD Risk Estimator Plus</a>, which uses the full Pooled Cohort Equations.
+  </div>
+
+  <div class="card">
+    <h3>Your risk factors</h3>
+
+    <div class="section-block">
+      <div class="section-label">Basics</div>
+      <div class="field-row">
+        <div class="field"><label for="age">Age (40&ndash;79)</label><input type="number" id="age" placeholder="e.g. 52" min="40" max="79"></div>
+        <div class="field">
+          <label for="sex">Sex</label>
+          <select id="sex"><option value="male">Male</option><option value="female">Female</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Cholesterol</div>
+      <div class="field-row">
+        <div class="field"><label for="totalChol">Total cholesterol (mg/dL)</label><input type="number" id="totalChol" placeholder="e.g. 200"></div>
+        <div class="field"><label for="hdl">HDL cholesterol (mg/dL)</label><input type="number" id="hdl" placeholder="e.g. 50"></div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Blood pressure</div>
+      <div class="field-row">
+        <div class="field"><label for="sbp">Systolic BP (mmHg)</label><input type="number" id="sbp" placeholder="e.g. 128"></div>
+        <div class="field">
+          <label for="bpTreated">On BP medication?</label>
+          <select id="bpTreated"><option value="no">No</option><option value="yes">Yes</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Smoking</div>
+      <div class="segmented">
+        <button id="smokeNo" class="active" data-val="no">Don't smoke</button>
+        <button id="smokeYes" data-val="yes">Current smoker</button>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-label">Diabetes</div>
+      <div class="segmented">
+        <button id="diabNo" class="active" data-val="no">No</button>
+        <button id="diabYes" data-val="yes">Yes</button>
+      </div>
+    </div>
+
+    <button class="calc-btn" id="calcBtn">Estimate my risk tier</button>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <div class="tier-badge" id="tierBadge">&mdash;</div>
+    <div class="tier-range" id="tierRange"></div>
+
+    <div class="tier-scale">
+      <div style="background:var(--tier-low); flex:5;"></div>
+      <div style="background:var(--tier-border); flex:2.5;"></div>
+      <div style="background:var(--tier-int); flex:12.5;"></div>
+      <div style="background:var(--tier-high); flex:10;"></div>
+    </div>
+    <div class="tier-marker-wrap"><div class="tier-marker" id="tierMarker" style="left:0%;"></div></div>
+    <div class="tier-scale-labels"><span>Low</span><span>Borderline</span><span>Intermediate</span><span>High</span></div>
+
+    <div id="breakdownList"></div>
+    <div class="save-row">
+      <button class="save-btn" id="saveBtn">Save this result</button>
+    </div>
+  </div>
+
+  <div class="card history-card" id="historyCard">
+    <h3>Your risk tier history</h3>
+    <div class="history-list" id="historyList"></div>
+    <button class="clear-history" id="clearHistory">Clear saved history</button>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">What is ASCVD risk?</h2>
+    <p class="article-p">ASCVD stands for <b>Atherosclerotic Cardiovascular Disease</b> &mdash; plaque buildup in the arteries that can lead to heart attack, stroke, or peripheral artery disease. A "10-year ASCVD risk" estimate answers a specific question: based on your current risk factors, what's the statistical chance of a first major cardiovascular event in the next decade?</p>
+    <p class="article-p">Doctors use this kind of estimate, alongside the full clinical picture, to help decide whether lifestyle changes alone are appropriate or whether medication (like a statin) should be part of the conversation.</p>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">How this calculator works</h2>
+    <p class="article-p">This tool uses the same core risk factors as the official ACC/AHA Pooled Cohort Equations &mdash; age, sex, total and HDL cholesterol, systolic blood pressure (and whether it's treated), smoking status, and diabetes &mdash; and combines them into a transparent point total. That total places you into one of four general <b>risk tiers</b>, matching the same tier boundaries used in clinical guidelines.</p>
+    <p class="article-p">What this tool <b>doesn't</b> do is reproduce the exact statistical formula (the Pooled Cohort Equations use complex race- and sex-specific regression coefficients derived from large research cohorts). For that precise percentage, use the official calculator linked above &mdash; this tool is meant to give you a clear, honest sense of where you likely stand and what's driving it.</p>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">Risk tier reference chart</h2>
+    <table class="tier-table">
+      <thead><tr><th></th><th>Tier</th><th>10-year risk</th><th>General guidance</th></tr></thead>
+      <tbody>
+        <tr><td class="swatch-cell"><span class="tier-swatch" style="background:var(--tier-low);"></span></td><td>Low</td><td>Under 5%</td><td>Continue healthy habits</td></tr>
+        <tr><td class="swatch-cell"><span class="tier-swatch" style="background:var(--tier-border);"></span></td><td>Borderline</td><td>5% &ndash; 7.4%</td><td>Lifestyle focus; discuss with a doctor</td></tr>
+        <tr><td class="swatch-cell"><span class="tier-swatch" style="background:var(--tier-int);"></span></td><td>Intermediate</td><td>7.5% &ndash; 19.9%</td><td>Statin therapy commonly discussed</td></tr>
+        <tr><td class="swatch-cell"><span class="tier-swatch" style="background:var(--tier-high);"></span></td><td>High</td><td>20% or higher</td><td>Statin therapy commonly recommended</td></tr>
+      </tbody>
+    </table>
+    <p class="article-p" style="margin-top:14px;">These tier boundaries reflect the 2018 ACC/AHA cholesterol guideline. The decision to start any treatment is always individualized between you and your doctor, not automatic at any threshold.</p>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">Factors that drive ASCVD risk</h2>
+    <div class="factor-grid">
+      <div class="factor-card"><span class="fc-icon">&#128197;</span><div class="fc-title">Age</div><div class="fc-desc">The single biggest driver &mdash; risk rises steeply through your 50s, 60s, and beyond.</div></div>
+      <div class="factor-card"><span class="fc-icon">&#128137;</span><div class="fc-title">Blood pressure</div><div class="fc-desc">Higher systolic pressure, especially if untreated, meaningfully raises risk.</div></div>
+      <div class="factor-card"><span class="fc-icon">&#129382;</span><div class="fc-title">Cholesterol</div><div class="fc-desc">High total cholesterol combined with low HDL ("good" cholesterol) raises risk.</div></div>
+      <div class="factor-card"><span class="fc-icon">&#128684;</span><div class="fc-title">Smoking</div><div class="fc-desc">One of the most modifiable major risk factors &mdash; quitting has an outsized benefit.</div></div>
+      <div class="factor-card"><span class="fc-icon">&#129517;</span><div class="fc-title">Diabetes</div><div class="fc-desc">Substantially raises cardiovascular risk independent of other factors.</div></div>
+      <div class="factor-card"><span class="fc-icon">&#129516;</span><div class="fc-title">Family history &amp; genetics</div><div class="fc-desc">Not in this calculator's formula, but a doctor will factor it into your overall picture.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">What does ASCVD stand for?<span class="faq-icon">+</span></button>
+        <div class="faq-a">ASCVD stands for Atherosclerotic Cardiovascular Disease &mdash; an umbrella term covering coronary heart disease, stroke, and peripheral artery disease caused by plaque buildup (atherosclerosis) in the arteries.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is this the same as the official ACC/AHA ASCVD risk calculator?<span class="faq-icon">+</span></button>
+        <div class="faq-a">No. The official calculator uses the Pooled Cohort Equations, a validated clinical formula with race- and sex-specific coefficients that produces an exact percentage. This tool uses a simplified, transparent point system based on the same risk factors to estimate a general risk tier, not a precise percentage. Use the official ACC tool (linked above) for the clinically validated number.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What counts as a "hard" ASCVD event?<span class="faq-icon">+</span></button>
+        <div class="faq-a">In risk models, a hard ASCVD event typically means a first non-fatal heart attack, death from coronary heart disease, or a fatal or non-fatal stroke &mdash; the major, unambiguous cardiovascular events researchers track.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What risk factors matter most for ASCVD?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Age, blood pressure, total and HDL cholesterol, smoking status, and diabetes are the core factors used in validated risk models. Age tends to be the single largest driver, which is why risk estimates rise steeply as people move into their 50s, 60s, and beyond.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How can I lower my ASCVD risk?<span class="faq-icon">+</span></button>
+        <div class="faq-a">The modifiable factors are the ones worth focusing on: quitting smoking, managing blood pressure, improving cholesterol (through diet, exercise, or medication), and managing blood sugar if you have diabetes. Each of these has strong evidence behind it for reducing cardiovascular risk over time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">At what risk level do doctors consider starting statin therapy?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Current guidelines generally use a 10-year risk of 7.5% or higher as a key threshold for discussing statin therapy, with the conversation often starting even earlier at the 5% "borderline" tier depending on other individual factors. This is a decision to make with a doctor, not from a calculator alone.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I track how my risk tier changes over time?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes — after estimating your tier, tap "Save this result" to add it to your private history, stored on your device only. This makes it easy to see how lifestyle changes or updated numbers (like a new cholesterol panel) shift your estimated tier.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How often should I recalculate my ASCVD risk?<span class="faq-icon">+</span></button>
+        <div class="faq-a">A reasonable approach is to recalculate whenever you get updated blood pressure or cholesterol numbers from a checkup, or after a significant change like quitting smoking or a new diabetes diagnosis — typically once a year or so for most adults.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="medical-note">
+    <b>Not a diagnostic or clinical tool:</b> This is a simplified educational estimate, not the validated Pooled Cohort Equations used in clinical practice, and it does not include every factor a doctor would consider (such as family history, kidney function, or inflammatory markers). Use the official ACC/AHA calculator and talk to a doctor for an actual clinical risk assessment and any treatment decisions.
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h3>Explore other tools</h3>
+    <div class="explore-grid">
+      <a href="https://bloodpressure.healthylifescale.com" class="explore-card">
+        <div class="ec-name">Blood Pressure Calculator</div>
+        <div class="ec-desc">Check your reading against AHA blood pressure categories.</div>
+        <div class="ec-arrow">Open &rarr;</div>
+      </a>
+      <a href="https://heartage.healthylifescale.com" class="explore-card">
+        <div class="ec-name">Heart Age Calculator</div>
+        <div class="ec-desc">See how lifestyle factors compare your heart age to your real age.</div>
+        <div class="ec-arrow">Open &rarr;</div>
+      </a>
+      <a href="https://heartraterecovery.healthylifescale.com" class="explore-card">
+        <div class="ec-name">Heart Rate Recovery</div>
+        <div class="ec-desc">Measure your post-exercise cardiovascular fitness.</div>
+        <div class="ec-arrow">Open &rarr;</div>
+      </a>
+      <a href="https://waisttohip.healthylifescale.com" class="explore-card">
+        <div class="ec-name">Waist-to-Hip Ratio</div>
+        <div class="ec-desc">Check your ratio against WHO risk categories.</div>
+        <div class="ec-arrow">Open &rarr;</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    Simplified educational estimate only, not the validated Pooled Cohort Equations. Not medical advice or a diagnostic tool.
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-about">
+      <h3>About Healthy Life Scale</h3>
+      <p>Healthy Life Scale is a collection of free health and wellness calculators &mdash; a calorie and macro tracker, BMI calculator, water intake calculator, TDEE calculator, sleep calculator, pregnancy due date and weight gain calculators, period and ovulation tracker, child height predictor, blood pressure calculator, heart age calculator, breath holding test, and ASCVD heart risk calculator. Every tool is free to use, works without an account or app download, and saves your data privately on your own device rather than a server. Built for anyone who wants quick, practical health calculators without ads, logins, or paywalls.</p>
+    </div>
+    <div class="footer-links-title">All tools</div>
+    <div class="footer-links">
+      <a href="https://healthylifescale.com">Calorie Tracker</a>
+      <a href="https://bmi.healthylifescale.com">BMI Calculator</a>
+      <a href="https://bodyfat.healthylifescale.com">Body Fat % Calculator</a>
+      <a href="https://waisttohip.healthylifescale.com">Waist-to-Hip Ratio Calculator</a>
+      <a href="https://framesize.healthylifescale.com">Body Frame Size Calculator</a>
+      <a href="https://bri.healthylifescale.com">Body Roundness Index Calculator</a>
+      <a href="https://water.healthylifescale.com">Water Intake Calculator</a>
+      <a href="https://bmr.healthylifescale.com">TDEE & Macro Calculator</a>
+      <a href="https://protein.healthylifescale.com">Protein Intake Calculator</a>
+      <a href="https://caloriesburned.healthylifescale.com">Calories Burned Calculator</a>
+      <a href="https://sleep.healthylifescale.com">Sleep Calculator</a>
+      <a href="https://nap.healthylifescale.com">Nap Calculator</a>
+      <a href="https://duedate.healthylifescale.com">Pregnancy Due Date Calculator</a>
+      <a href="https://pregnancyweight.healthylifescale.com">Pregnancy Weight Gain Calculator</a>
+      <a href="https://period.healthylifescale.com">Period & Ovulation Tracker</a>
+      <a href="https://height.healthylifescale.com">Child Height Predictor</a>
+      <a href="https://bloodpressure.healthylifescale.com">Blood Pressure Calculator</a>
+      <a href="https://heartage.healthylifescale.com">Heart Age Calculator</a>
+      <a href="https://ascvd.healthylifescale.com" style="font-weight:700;color:var(--ink);">ASCVD Risk Calculator</a>
+      <a href="https://heartratezone.healthylifescale.com">Target Heart Rate Zone</a>
+      <a href="https://heartraterecovery.healthylifescale.com">Heart Rate Recovery Calculator</a>
+      <a href="https://breathholding.healthylifescale.com">Breath Holding Test</a>
+      <a href="https://pace.healthylifescale.com">Running Pace Calculator</a>
+      <a href="https://symptoms.healthylifescale.com">Symptom Checker</a>
+      <a href="https://mentalhealth.healthylifescale.com">Mental Health Survey</a>
+      <a href="https://fertility.healthylifescale.com">Fertility Checklist</a>
+      <a href="https://gripstrength.healthylifescale.com">Grip Strength Calculator</a>
+      <a href="https://onerepmax.healthylifescale.com">One-Rep Max Calculator</a>
+      <a href="https://pushuptest.healthylifescale.com">Push-Up / Sit-Up Test Benchmark</a>
+      <a href="https://bac.healthylifescale.com">BAC Calculator</a>
+      <a href="https://a1c.healthylifescale.com">A1C / Blood Sugar Converter</a>
+    </div>
+        <div class="footer-legal">
+      <a href="https://healthylifescale.com/privacy-policy.html">Privacy Policy</a><span class="fl-dot">&middot;</span><a href="https://healthylifescale.com/about.html">About</a>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Healthy Life Scale. All tools are educational and provide general estimates only &mdash; they are not medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical concerns.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.querySelector('.faq-icon').textContent = isOpen ? '\u2212' : '+';
+    });
+  });
+
+  function setupSegmented(groupIds, callback){
+    groupIds.forEach(id=>{
+      $(id).addEventListener('click', ()=>{
+        groupIds.forEach(gid => $(gid).classList.remove('active'));
+        $(id).classList.add('active');
+        callback();
+      });
+    });
+  }
+  let lastResult = null;
+  let smoking = 'no';
+  setupSegmented(['smokeNo','smokeYes'], ()=>{ smoking = document.querySelector('#smokeNo.active,#smokeYes.active').getAttribute('data-val'); });
+  let diabetes = 'no';
+  setupSegmented(['diabNo','diabYes'], ()=>{ diabetes = document.querySelector('#diabNo.active,#diabYes.active').getAttribute('data-val'); });
+
+  $('calcBtn').addEventListener('click', ()=>{
+    const age = parseFloat($('age').value);
+    const totalChol = parseFloat($('totalChol').value);
+    const hdl = parseFloat($('hdl').value);
+    const sbp = parseFloat($('sbp').value);
+    const bpTreated = $('bpTreated').value;
+
+    if(!age || !totalChol || !hdl || !sbp){ alert('Please fill in age, cholesterol, HDL, and blood pressure.'); return; }
+
+    const factors = [];
+
+    // Age points
+    let agePts = 0;
+    if(age >= 70) agePts = 6;
+    else if(age >= 65) agePts = 5;
+    else if(age >= 60) agePts = 4;
+    else if(age >= 55) agePts = 3;
+    else if(age >= 50) agePts = 2;
+    else if(age >= 45) agePts = 1;
+    factors.push({name:'Age ('+age+')', points: agePts});
+
+    // Total cholesterol
+    let cholPts = 0;
+    if(totalChol >= 240) cholPts = 2;
+    else if(totalChol >= 200) cholPts = 1;
+    factors.push({name:'Total cholesterol', points: cholPts});
+
+    // HDL
+    let hdlPts = 0;
+    if(hdl < 40) hdlPts = 1;
+    else if(hdl >= 60) hdlPts = -1;
+    factors.push({name:'HDL cholesterol', points: hdlPts});
+
+    // Systolic BP
+    let sbpPts = 0;
+    if(sbp >= 140){ sbpPts = bpTreated === 'yes' ? 3 : 2; }
+    else if(sbp >= 130){ sbpPts = bpTreated === 'yes' ? 2 : 1; }
+    else if(sbp >= 120){ sbpPts = 1; }
+    factors.push({name:'Systolic BP ('+(bpTreated==='yes'?'treated':'untreated')+')', points: sbpPts});
+
+    if(smoking === 'yes') factors.push({name:'Smoking', points:2});
+    if(diabetes === 'yes') factors.push({name:'Diabetes', points:3});
+
+    const total = factors.reduce((s,f)=>s+f.points, 0);
+
+    let tier, color, rangeText, pct;
+    if(total <= 2){ tier='LOW'; color='var(--tier-low)'; rangeText='Estimated tier: Low (under 5%)'; pct=10; }
+    else if(total <= 4){ tier='BORDERLINE'; color='var(--tier-border)'; rangeText='Estimated tier: Borderline (5% \u2013 7.4%)'; pct=30; }
+    else if(total <= 7){ tier='INTERMEDIATE'; color='var(--tier-int)'; rangeText='Estimated tier: Intermediate (7.5% \u2013 19.9%)'; pct=60; }
+    else { tier='HIGH'; color='var(--tier-high)'; rangeText='Estimated tier: High (20% or higher)'; pct=90; }
+
+    $('tierBadge').textContent = tier;
+    $('tierBadge').style.background = color;
+    $('tierRange').textContent = rangeText;
+    $('tierMarker').style.left = pct+'%';
+
+    const breakdownHtml = factors.filter(f=>f.points !== 0).map(f=>`
+      <div class="breakdown-row">
+        <div class="br-name">${f.name}</div>
+        <div class="br-value">${f.points > 0 ? '+' : ''}${f.points}</div>
+      </div>`).join('');
+    $('breakdownList').innerHTML = breakdownHtml || '<div class="breakdown-row"><div class="br-name">No additional risk points from these factors</div></div>';
+
+    $('resultCard').classList.add('show');
+    if($('resultCard').scrollIntoView){ $('resultCard').scrollIntoView({behavior:'smooth', block:'start'}); }
+    lastResult = { tier, rangeText, date: new Date().toISOString() };
+    $('saveBtn').disabled = false;
+    $('saveBtn').textContent = 'Save this result';
+  });
+
+  const hasClaudeStorage = typeof window.storage !== 'undefined' && window.storage;
+  let localStorageOK = true;
+  try{ localStorage.setItem('__test__','1'); localStorage.removeItem('__test__'); }catch(e){ localStorageOK = false; }
+  const store = {
+    async get(key){
+      if(hasClaudeStorage){ try{ const r = await window.storage.get(key, false); return r ? r.value : null; }catch(e){ return null; } }
+      if(!localStorageOK) return null;
+      try{ return localStorage.getItem(key); }catch(e){ return null; }
+    },
+    async set(key, value){
+      if(hasClaudeStorage){ try{ await window.storage.set(key, value, false); return true; }catch(e){ return false; } }
+      if(!localStorageOK) return false;
+      try{ localStorage.setItem(key, value); return true; }catch(e){ return false; }
+    }
+  };
+
+  $('saveBtn').addEventListener('click', async ()=>{
+    if(!lastResult) return;
+    const raw = await store.get('ascvd_history');
+    let hist = [];
+    try{ hist = raw ? JSON.parse(raw) : []; }catch(e){ hist = []; }
+    hist.push(lastResult);
+    if(hist.length > 20) hist = hist.slice(hist.length - 20);
+    const ok = await store.set('ascvd_history', JSON.stringify(hist));
+    $('saveBtn').textContent = ok ? 'Saved \u2713' : 'Could not save';
+    $('saveBtn').disabled = true;
+    await renderHistory();
+  });
+
+  $('clearHistory').addEventListener('click', async ()=>{
+    await store.set('ascvd_history', JSON.stringify([]));
+    await renderHistory();
+  });
+
+  async function renderHistory(){
+    const raw = await store.get('ascvd_history');
+    let hist = [];
+    try{ hist = raw ? JSON.parse(raw) : []; }catch(e){ hist = []; }
+    const card = $('historyCard');
+    if(!hist.length){ card.classList.remove('show'); return; }
+    card.classList.add('show');
+    $('historyList').innerHTML = hist.slice().reverse().slice(0,10).map(h=>{
+      const d = new Date(h.date);
+      const dateStr = d.toLocaleDateString(undefined, {month:'short', day:'numeric', year:'numeric'});
+      return `<div class="history-row"><span class="hr-date">${dateStr}</span><span class="hr-val">${h.tier}</span></div>`;
+    }).join('');
+  }
+
+  renderHistory();
+})();
+</script>
+</body>
+</html>
